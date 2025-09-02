@@ -1,0 +1,182 @@
+* {
+  color: black;
+}
+
+/* preloader */
+.preloader-container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 111;
+  background: #fff;
+  text-align: center;
+  padding-top: 45vh;
+}
+/* end preloader */
+header {
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* end logo */
+/* top bar icon color */
+.tap-bar-icon-color > i{
+  color: #686D76;
+}
+/* end */
+/* search icon  */
+.big-screen-search-icon > i {
+  color: red;
+}
+.small-screen-search-icon > i {
+  color: red;
+}
+/* end */
+/* mobile-menu-icon-margin */
+.mobile-menu-icon-margin {
+  margin-right: 2rem !important;
+}
+/* end mobile-menu-icon-margin */
+
+/* mobile nav menu icon */
+.navbar-toggler-icon:focus {
+  box-shadow: none;
+  outline: 0;
+  border: none;
+}
+/* end mobile nav icon */
+/* menu-bar-border-style */
+.menu-bar-border-style {
+  border-bottom: 1px solid grey;
+}
+/* end menu-bar-border-style */
+/* credit border */
+.credit-border {
+  border-top: 1px solid grey;
+}
+/* end credit border */
+
+/* footer company about */
+.footer-company-about {
+  padding: 30px !important;
+  padding-bottom: 10px !important;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 5%;
+}
+/* end footer company about */
+
+
+
+/* footer */
+.bottom-menu > h3 {
+  font-weight: 500;
+}
+.bottom-menu-item:hover {
+  color: blue;
+  transform: scale(1.2);
+  font-weight: bold;
+}
+.bottom-menu-item > a > span {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+
+/* social media header and footer */
+.social-facebook {
+  color: blue;
+}
+.social-twitter {
+  color: blue;
+}
+.social-pinterest {
+  color: red;
+}
+.social-instagram {
+  color: rgb(218, 15, 15);
+}
+.social-youtube {
+  color: red;
+}
+/* end header social media */
+.social-facebook > a > i {
+  color: blue;
+}
+.social-twitter > a > i {
+  color: blue;
+}
+.social-pinterest > a > i {
+  color: red;
+}
+.social-instagram > a > i {
+  color: rgb(218, 15, 15);
+}
+.social-youtube > a > i {
+  color: red;
+}
+/* end footer */
+
+
+/* ############################################################################# */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.carousel-item > img {
+  width: 100% !important;
+  height: 50vh !important;
+}
+
+.body-image-align {
+  width: 100% !important;
+ }
+
+
+ /* logo screen setup */
+ @media (max-width: 991px) {
+  #lg-screeen-setup {
+    margin-top: -15px;
+  }
+}
+ /* end logo screen setup */
+
+ /* master-cart-design */
+ .l-badge {
+  padding: 0.35rem 0.35rem;
+  line-height: 1;
+  height: auto;
+  top: 40%;
+}
+.m-badge {
+  font-size: 0.55rem;
+  padding: 0.25rem 0.25rem;
+  line-height: 1;
+  height: auto;
+  top: 40%;
+}
+
+ /* end master-cart-design */
+
+ /* footer design */
+
+ /* end footer design */
