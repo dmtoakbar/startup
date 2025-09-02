@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Equa Study</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/fontawesome/css/all.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!--preloader-->
+    <div class="preloader-container">
+      <div class="spinner-grow" style="color: blue" role="status"></div>
+      <div class="spinner-grow" style="color: green" role="status"></div>
+      <div class="spinner-grow" style="color: red" role="status"></div>
+      <div class="spinner-grow" style="color: yellow" role="status"></div>
+    </div>
+    <!--end preloader-->
+    <!--cart offcanvas cart-->
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
+    <div class="offcanvas-header justify-content-center">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary fw-bold">Your cart</span>
+          <span class="badge bg-primary rounded-circle pt-2">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Grey Hoodie</h6>
+              <small class="text-body-secondary">Brief description</small>
+            </div>
+            <span class="text-body-secondary">$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Dog Food</h6>
+              <small class="text-body-secondary">Brief description</small>
+            </div>
+            <span class="text-body-secondary">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Soft Toy</h6>
+              <small class="text-body-secondary">Brief description</small>
+            </div>
+            <span class="text-body-secondary">$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="fw-bold">Total (USD)</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+      </div>
+    </div>
+  </div>
+  <!-- end offcanvas cart-->
+  <!-- offcanvas search on mobile screen-->
+  <div class="offcanvas offcanvas-end offcanvas-center" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch"
+    aria-labelledby="Search">
+    <div class="offcanvas-header justify-content-center">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+
+      <div class="order-md-last">
+        <h4 class="text-primary fw-bold mb-3">
+          Search
+        </h4>
+        <div class="search-bar border rounded-2 border-dark-subtle">
+          <form id="search-form" class="text-center d-flex align-items-center" action="" method="">
+            <input type="text" class="form-control border-0 bg-transparent" placeholder="Search Here" />
+            <i class="fa fa-search fs-4 me-3"></i>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end offcanvas search on mobile screen-->
+    <!--header-->
+    <header class="sticky-top">
+      <!--top header-->
+      <div class="container-fluid py-1 px-lg-4">
+        <div class="row py-2 align-items-center">
+          <!-- logo -->
+          <div class="col-7 col-lg-3 text-start">
+            <div class="main-logo">
+                <a href="" class="main-logo-text"
+                  >Equa <i class="fa fa-pencil"></i> Study</a
+                >
+            </div>
+          </div>
+          <!-- end logo -->
+          <!-- social media -->
+          <div
+            class="col-5 offset-lg-5 col-lg-4 d-flex justify-content-end  align-items-center"
+          >
+            <div class="text-end d-flex">
+              <span class="fs-6 secondary-font d-xl-flex d-lg-flex d-md-flex d-sm-flex d-none">Join us&nbsp;:&nbsp;</span>
+              <div class="top-social-media-bar gap-lg-4 gap-md-4 gap-sm-3 gap-2">
+                <a href="#">
+                  <i class="fa-brands fa-youtube social-youtube"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-facebook social-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-instagram social-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-twitter social-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-pinterest social-pinterest"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- end social media -->
+        </div>
+      </div>
+      <!--end top header-->
+      <!-- menu bar -->
+      <div class="container-fluid px-lg-4 menu-bar-border-style">
+        <nav class="main-menu d-flex navbar navbar-expand-lg ">
+         <!-- mobile menu bar icon -->
+          <div class="d-flex d-lg-none align-items-end mt-1">
+            <ul class="d-flex justify-content-end list-unstyled m-0">
+              <li>
+                <a href="#" class="mobile-menu-icon-margin tap-bar-icon-color">
+                  <i class="fa fa-user fs-4"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="mobile-menu-icon-margin tap-bar-icon-color">
+                  <i class="fa fa-heart fs-4"></i>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="mobile-menu-icon-margin tap-bar-icon-color" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                  aria-controls="offcanvasCart">
+                  <i class="fa fa-cart-shopping fs-4 position-relative"></i>
+                  <span class="position-absolute translate-middle badge rounded-circle bg-primary pt-2">
+                   03
+                  </span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="mobile-menu-icon-margin small-screen-search-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"
+                  aria-controls="offcanvasSearch">
+                  <i class="fa fa-search fs-4"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+  
+          </div>
+           <!-- end mobile menu bar icon -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  
+            <div class="offcanvas-header justify-content-center">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!-- sort page -->
+            <div class="offcanvas-body align-items-center justify-content-between">
+              <select class="filter-categories border-0 mb-0 me-5 select-by-top-bar">
+                <option>Shop by Category</option>
+                <option>Clothes</option>
+                <option>Food</option>
+                <option>Food</option>
+                <option>Toy</option>
+              </select>
+              <!-- end sort page -->
+              <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
+                <li class="nav-item">
+                  <a href="#" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown"
+                    aria-expanded="false">Pages</a>
+                  <ul class="dropdown-menu" aria-labelledby="pages">
+                    <li><a href="#" class="dropdown-item">About Us<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Shop<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Single Product<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Cart<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Wishlist<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Checkout<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Blog<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Single Post<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Contact<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">FAQs<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Account<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Thankyou<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Error 404<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                    <li><a href="#" class="dropdown-item">Styles<span
+                          class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Others</a>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                  <a href="#" class="nav-link text-dark big-screen-search-icon" 
+                  data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"
+                  aria-controls="offcanvasSearch"
+                  ><i class="fa fa-search fs-4"></i></a>
+                </li>
+              </ul>
+  
+              <div class="d-none d-lg-flex align-items-end">
+                <ul class="d-flex justify-content-end list-unstyled m-0">
+                  <li>
+                    <a href="#" class="mx-3 tap-bar-icon-color">
+                      <i class="fa fa-user fs-4"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="mx-3 tap-bar-icon-color">
+                      <i class="fa fa-heart fs-4"></i>
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="mx-3 tap-bar-icon-color" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                      aria-controls="offcanvasCart">
+                      <i class="fa fa-cart-shopping fs-4 position-relative"></i>
+                      <span class="position-absolute translate-middle badge rounded-circle bg-primary pt-2">
+                        03
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </nav>
+  
+  
+  
+      </div>
+      <!-- end menu bar -->
+    </header>
+    <!--end header-->
+    <!-- body -->
+    <!-- carousel -->
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/first.jpeg" class="img-responsive">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Example headline.</h1>
+              <p class="text-white">Some representative placeholder content for the first slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/third.jpeg" class="img-responsive">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p class="text-white">Some representative placeholder content for the second slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/second.jpeg" class="img-responsive">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>One more for good measure.</h1>
+              <p class="text-white">Some representative placeholder content for the third slide of this carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  <!-- end carousel -->
+  
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+  
+    <div class="container marketing">
+  
+      <!-- Three columns of text below the carousel -->
+      <div class="row my-4">
+        <div class="col-lg-4">
+          <img src='img/first.jpeg' class="bd-placeholder-img img-responsive body-image-align">
+          <h2 class="fw-normal">Heading</h2>
+          <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+          <p class="d-flex justify-content-center"><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src='img/first.jpeg' class="bd-placeholder-img img-responsive body-image-align">
+          <h2 class="fw-normal">Heading</h2>
+          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+          <p class="d-flex justify-content-center"><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src='img/first.jpeg' class="bd-placeholder-img img-responsive body-image-align">
+          <h2 class="fw-normal">Heading</h2>
+          <p>And lastly this, the third column of representative placeholder content.</p>
+          <p class="d-flex justify-content-center"><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src='img/first.jpeg' class="bd-placeholder-img img-responsive body-image-align">
+          <h2 class="fw-normal">Heading</h2>
+          <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+          <p class="d-flex justify-content-center"><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src='img/first.jpeg' class="bd-placeholder-img img-responsive body-image-align">
+          <h2 class="fw-normal">Heading</h2>
+          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+          <p class="d-flex justify-content-center"><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src='img/first.jpeg' class="bd-placeholder-img img-responsive body-image-align">
+          <h2 class="fw-normal">Heading</h2>
+          <p>And lastly this, the third column of representative placeholder content.</p>
+          <p class="d-flex justify-content-center"><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+  
+  
+      <!-- START THE FEATURETTES -->
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
+          <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="img/first.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
+          <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="img/first.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
+          <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="img/first.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <!-- /END THE FEATURETTES -->
+  
+    </div><!-- /.container -->
+    <!-- end body -->
+
+    <!-- footer -->
+    
+    <footer class="my-2">
+      <div class="container-fluid px-lg-4">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="bottom-menu">
+              <a href="" class="main-logo-text d-flex justify-content-center align-items-center">Equa&nbsp;<i class="fa fa-pencil"></i>&nbsp;Study</a>
+              <p class="blog-paragraph fs-6 mt-3 d-flex justify-content-center text-center">Subscribe to our newsletter to get updates about our grand offers.</p>
+              <div class="social-links d-flex justify-content-center">
+                <ul class="d-flex list-unstyled gap-2">
+                  <li class="social-youtube">
+                    <a href="#">
+                      <i class="fa-brands fa-youtube social-icon"></i>
+                    </a>
+                  </li>
+                  <li class="social-facebook">
+                    <a href="#">
+                      <i class="fa-brands fa-facebook social-icon"></i>
+                    </a>
+                  </li>
+                  <li class="social-instagram">
+                    <a href="#">
+                      <i class="fa-brands fa-instagram social-icon"></i>
+                    </a>
+                  </li>
+                  <li class="social-twitter">
+                    <a href="#">
+                      <i class="fa-brands fa-twitter social-icon"></i>
+                    </a>
+                  </li>
+                  <li class="social-pinterest">
+                    <a href="#">
+                      <i class="fa-brands fa-pinterest social-icon"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bottom-menu">
+              <h3 class="d-flex justify-content-center">Quick Links</h3>
+              <ul class="bottom-menu-list list-unstyled">
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Home</a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>About us</a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Offer </a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Services</a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Conatct Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bottom-menu">
+              <h3 class="d-flex justify-content-center">Quick Links</h3>
+              <ul class="bottom-menu-list list-unstyled">
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Home</a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>About us</a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Offer </a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Services</a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Conatct Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bottom-menu">
+              <h3 class="d-flex justify-content-center">Quick Links</h3>
+              <ul class="bottom-menu-list list-unstyled">
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Home</a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>About us</a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Offer </a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Services</a>
+                </li>
+                <li class="bottom-menu-item d-flex justify-content-center">
+                  <a href="#" class="nav-link"><span>&#8227;&nbsp;</span>Conatct Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <!-- footer credit -->
+      <div class="container-fluid px-lg-4 credit-border">
+        <div class="row mt-2">
+          <div class="col-md-6 text-xl-start text-lg-start text-md-start text-center">
+            <p class="secondary-font">© 2023 Waggy. All rights reserved</p>
+          </div>
+          <div class="col-md-6 text-xl-end text-lg-end text-md-end text-center">
+            <p class="secondary-font"><a href="">Privacy Policy</a>&nbsp;|&nbsp;<a href="">Terms & Conditions</a></p>
+          </div>
+        </div>
+      </div>
+    <!-- end footer credit -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
